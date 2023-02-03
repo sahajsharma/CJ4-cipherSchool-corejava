@@ -1,1 +1,1 @@
-# week1-CJ4-cipherSchool
+# CJ4-cipherSchool-corejava
