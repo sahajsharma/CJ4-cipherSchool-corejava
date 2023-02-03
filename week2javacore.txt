@@ -1,0 +1,520 @@
+///////////////////////////////////////	Abstration///////////////////////////////////////////////////////////////
+
+package CoreJava;
+
+abstract class Car{
+	int maxSpeed;
+	abstract void accelerate();
+	abstract void brake();
+}
+
+abstract class BMW extends Car{
+	void accelerate() {
+		System.out.println("BMW is accelerating");
+	}
+}
+
+class BMW2 extends BMW{
+	void brake() {
+		System.out.println("BMW is applying break");
+	}
+	
+}
+
+abstract class A{
+	int x = 10;
+	void fun() {
+		System.out.println("Hello i am A");
+	}
+}
+public class AbstractStudy {
+	
+	public static void main(String[] args) {
+//		Car c = new BMW();
+//		BMW beemer = new BMW();
+//		beemer.acclerate();
+		
+		BMW2 b = new BMW2();
+		b.accelerate();
+		
+	}
+
+}
+
+
+///////////////////////////////////////////////////////Interfaces//////////////////////////////////////////////////////////////
+
+
+package CoreJava;
+
+interface Shape{
+	double pi = 3.14;
+	double getSquare(double r);
+}
+class Circle implements Shape{
+	public double getSquare(double r) {
+		return r*r;
+	}
+	void fun() {
+		System.out.println("Hey, i am implementing an interface called shape");
+	}
+}
+
+public class Interfaces {
+
+	public static void main(String args[]) {
+		Circle c = new Circle();
+		System.out.println(c.getSquare(5));
+		c.fun();
+	}
+}
+
+
+
+
+package CoreJava;
+
+interface M{
+	int x = 10;
+	void fun();
+}
+
+interface N {
+	int x = 20;
+	void fun();
+}
+
+interface O extends M,N{
+	public void fun() {
+		System.out.println("Hello i m in finction c");
+		System.out.println(M.x);
+		System.out.println(N.x);
+		System.out.println(M.super.hashCode());
+		System.out.println(N.super.hashcode());
+		
+	}
+}
+
+class D implements O
+{
+	public void fun()
+	{
+		System.out.println("Hello i am in fnction in D");
+	}
+}
+
+//class C implements M,N
+//{
+//		public void fun() {
+//	           System.out.println("Hello, i am in findtion c");
+//} 
+//}
+
+public class MultiInhertitanceStudy {
+	public static void main(String[] args) {
+//		C c = new C();
+//		c.fun();
+		
+		D d = new D();
+		d.fun();
+	}
+}
+
+
+
+package CoreJava;
+
+interface M{
+	int x = 10;
+	void fun();
+}
+
+interface N{
+	int x = 20;
+	void fun();
+}
+
+class C implements M,N{
+	public void fun() {
+		System.out.println("I am in function c");
+		System.out.println(M.x);
+		System.out.println(N.x);
+		System.out.println(M.super.hashCode());
+		System.out.println(N.super.hashCode());
+	}
+}
+interface O extends M,N{
+	void fun();
+}
+
+class D implements o{
+	public void fun() {
+		System.out.println("Hello u are in function D");
+	}
+}
+
+
+//class C implements M,{
+//	 public void fun() {
+//		 System.out.println("Hello, i am in function c");
+//	 }
+
+public class MultipleInheritanceStudy {
+
+	public static void main(String[] args) {
+		
+		C c = new C();
+		c.fun();
+		
+		D d = new D();
+		d.fun();
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////Access Modifier////////////////////////////////////////////////
+
+package accessModifire2;
+
+public class A {
+	int x = 10;
+	private int y =15;
+	protected int z =20;
+	protected int  w =25;
+	
+	public static void main(String[] args) {
+		A obj = new A();
+		C childobj = new C();
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		System.out.println(obj.z);
+		System.out.println(obj.w);
+	}
+}
+
+
+package accessModifire2;
+import accessModifire1.A;
+
+public class C extends A{
+	public static void main(String[] args) {
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		System.out.println(obj.z);
+	}
+}
+
+
+
+package accessModifire1;
+
+public class B {
+	
+	public static void main(String[] args) {
+		A obj = new A();
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		System.out.println(obj.z);
+		System.out.println(obj.w);
+	}
+}
+
+
+
+///////////////////////////////////////////////////////Encapulation///////////////////////////////////////////////////////
+
+
+package CoreJava;
+
+class Demo{
+	private int a = 3;
+	private int b = 10;
+	private int c = 15;
+	private int d = 20;
+	
+	public int getA()
+	{
+		System.out.println("Value of A read");
+		return this.a;
+	}
+	public int getB()
+	{
+		System.out.println("Value of B read");
+		return this.b;
+	}
+	
+	public int getc()
+	{
+		System.out.println("Value of B read");
+		return this.b;
+	}
+	
+	
+	public void setA(int a)
+	{
+		if(a>100) {
+			this.a=a;
+			System.out.println("Value of a changed to " + a);
+		}
+		else
+		{
+			System.out.println("Cannotset - value outside limits");
+			
+		}
+	}
+	
+	public void setB(int b)
+	{
+		this.b=b;
+	}
+}
+
+public class encapstudy {
+	
+	public static void main(String[] args) {
+		Demo d = new Demo();
+//		System.out.println(d.a);
+		
+		System.out.println(d.getA());
+		d.setA(100);
+		System.out.println(d.getA());
+		
+	}
+
+}
+
+
+
+//////////////////////////////////////////////////Array Introdunction/////////////////////////////////////////////////////
+
+package CoreJava;
+
+public class arraystudy {
+	
+	static void print(int arr[])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i] + " ");
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		int size =5;
+		int arr[] = new int[5];
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
+		System.out.println(arr[2]);
+		System.out.println(arr[3]);
+		System.out.println(arr[4]);
+		
+//		for(int i=0;i<size;i++) {
+//			System.out.println(arr[i] + " ");
+//		}
+//		System.out.println();
+		
+		print(arr);
+		
+		for(int i=0;i<size;i++)
+		{
+			arr[i] = i+1;
+		}
+		
+		print(arr);
+		
+		int arr2[] = {1,2,3}
+		print(arr2);
+		
+		int copyArray[] = new int[2*size];
+		for(int i=0;i<size;i++)
+		{
+			copyArray[i] = arr[i];
+		}
+		copyArray[5] = 6;
+		copyArray[6] = 7;
+		print(copyArray);
+		
+	}
+
+}
+
+
+
+package CoreJava;
+
+public class passingArray {
+	
+	static void addOne(int x) {
+		x=x+1;
+	}
+	
+	static void addOne(int arr[])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]++;
+		}
+	}
+	
+	public static void main(String[] args) {
+		int x =10;
+		addOne(x);
+		System.out.println(x);
+		
+		int arr[] = {1,2,3,4,5};
+		addOne(arr);
+		for(int i =0;i<arr.length;i++)
+		{
+			System.out.println(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+}
+
+
+
+
+///////////////////////////////////////////////////////////MultiDimensianl Array//////////////////////////////////////
+
+
+package CoreJava;
+
+public class MultiDimArray {
+	
+	public static void main(String[] args) {
+		int row = 5;
+		int col = 3;
+		int arr[][] = new int [row][col];
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[0].length;j++) {
+				System.out.println(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		int arr[][] = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9}
+		};
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[0.length;j++) {
+				System.out.println(arr[i][j]+" ");
+			}
+			System.out.println();
+		
+		}
+	}
+
+}
+
+
+
+///////////////////////////////////////////////////////Jagged Array////////////////////////////////////////////////////////
+
+
+package CoreJava;
+
+public class JaggedArrays {
+	static void printJaggedArray(int arr[][])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j =0;i<arr[i].length.j++)
+			{
+				System.out.println(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args)
+	{
+		it arr[][] = new int[3][];
+		arr[0] = new int[3];
+		arr[1] = new int[2];
+		arr[1] = new int[3];
+		
+		printJaggedArray(arr);
+		
+		int arr2[][] = new int[1][];
+		arr[0] = new int[]{1,2,3};
+		arr[1] = new int[]{2,3};
+		arr[2] = new {4,5,6};
+	}
+
+}
+
+
+/////////////////////////////////////////////////////////Scanner//////////////////////////////////////////////////////////////
+
+package corejava;
+
+public class ScannerStudy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter your Name : ");
+		String firstName = sc.next();
+		String lastName = sc.next();
+		System.out.println("Please enter your Profession : ");
+		String profession = sc.next();
+		System.out.println("Please enter your Address : ");
+		sc.nextLine();
+		String address = sc.nextLine();
+		System.out.println("Please enter your House number : ");
+		int number = sc.nextInt();
+		
+		System.out.println("First Name : " + firstName);
+		System.out.println("Last Name : " + lastName);
+		System.out.println("Profession : " + profession);
+		System.out.println("Address : " + address);
+		System.out.println("House number : " + number);
+
+
+
+	}
+
+}
+
+
+
+package corejava;
+
+public class ScannerStudy2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Please enter your First Name : ");
+		String firstName = sc.nextLine();
+		System.out.print("Please enter your Last Name : ");
+		String lastName = sc.nextLine();
+		System.out.print("Please enter your Profession : ");
+		String profession = sc.nextLine();
+		System.out.print("Please enter your Address : ");
+		String address = sc.nextLine();
+		System.out.print("Please enter your House number : ");
+		int number = Integer.parseInt(sc.nextLine());
+		System.out.print("Please enter your average Percentage : ");
+		float percentage = Float.parseFloat(sc.nextLine());
+		
+		System.out.println("First Name : " + firstName);
+		System.out.println("Last Name : " + lastName);
+		System.out.println("Profession : " + profession);
+		System.out.println("Address : " + address);
+		System.out.println("House number : " + number);
+		System.out.println("Percentage : " + percentage);
+
+
+
+	}
+
+}
