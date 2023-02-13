@@ -1,0 +1,1377 @@
+////////////////////////////////////////////////////////////////Array Input/////////////////////////////////////////////////
+
+package CoreJava;
+
+import java.util.Scanner;
+
+public class ArrayInput {
+	
+	public static void  main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array: ");
+		int n = sc.nextInt();
+		
+		int arr[] = new int[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Please Enter " + {i+1} + "elements: ");
+			arr[i] = sc.nextInt();
+		}
+		
+		System.out.println("Array is: ");
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr[i] + " ");
+		}
+		sc.close();
+	}
+	
+
+}
+
+
+///////////////////////////////////////////////////////////Optimization Example////////////////////////////////////////////////
+
+package CoreJava;
+
+public class TieComplexity {
+	static boolean isPrimeRam(int n)
+	{
+		int(n<=1) return false;
+		if(n==2) return true;
+		for(int i=2;i<Math.sqrt(n);i++)
+		{
+			if(n%i == 0) return false;
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		int n = 100;
+		long start = System.currentTimeMillis(); 
+		System.out.println(isPrimeRam(n));
+		long end = System.currentTimeMillis();
+		System.out.println("Time by Ram's apporach : " + (end-start));
+		
+		start = System.currentTimeMillis();
+		System.out.println(isPrimeRam(n));
+		
+		end = System.currentTimeMillis();
+		System.out.println("Time by Ram's apporach : " + (end-start));
+	}
+
+}
+
+
+
+//////////////////////////////////////////////////////Selection sort//////////////////////////////////////////////////////////
+
+
+class Compute
+{
+	statc pari getMinMax(ong a[], long n)
+	{
+		int min = a[0];
+		for(int i=0; i<n;i++)
+		{
+			if(arr[i]<min)
+			{
+				min = arr[i];
+			}
+		}
+		long mac = arr[0];
+		int maxIndex =0;
+		for(long i = 0; i<n;i++)
+		{
+			if(arr[i]>max)
+			{
+				max = arr[i];
+				maxIndex = i;
+			}
+		}
+		
+		System.out.println("Min found at : " + (minIndex +1) + ". Max found at: " + maxIndex)
+		return new pair(min,max);
+	}
+}
+
+
+
+
+/////////////////////////////////////////////////////////Selection sort Code//////////////////////////////////////////////
+
+
+package CoreJava;
+
+public class SelectionSort {
+	public static voiid main(String[] args)
+	{
+		int arr[] = {3,7,10,11,4,1};
+		int n = arr.length;
+		
+		for(int i=0;i<n-1;i++)
+		{
+			int minIndex = 1;
+			for(int j = i+1;j<n;j++)
+			{
+				if(arr[j]<arr[minIndex])
+				{
+					minIndex = j;
+				}
+			}
+			
+			int temp = arr[i];
+			arr[i] = arr[minIndex];
+			arr[minIndex] = temp;
+		}
+		for(int i = 0;i<n;i++)
+		{
+			System.out.println(arr[i]+ " ");
+		}
+		System.out.println();
+	}
+
+}
+
+
+
+//////////////////////////////////////////////////////////////String 1 ///////////////////////////////////////////////////////////
+
+
+package CoreJava;
+
+public class StringStudy {
+	
+	public static void main(String[] args)
+	{
+		String name = "Cipherschools";
+		String name2 = "Cipherschools";
+		
+		String name3 = new String("Cipherschools");
+		String name4 = new String("Cipherschools");
+
+		System.out.println(name==name2);
+		System.out.println(name3==name4);
+		System.out.println(name==name3);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1. CONCATENATION");
+		
+		String s1 = "Hello";
+		s1 = s2 + "Peeps";
+		System.out.println(s1);
+		System.out.println(s1 + " How are u doing?");
+		System.out.println(s1);
+		
+		String s2 = new String("Hello");
+		String s3 = new String("People");
+		String s4 = s2.concat(s3);
+		System.out.println(s4);
+		System.out.println(s2);
+		
+	}
+
+}
+
+
+
+//////////////////////////////////////////////////////String 2//////////////////////////////////////////////////
+
+
+package CoreJava;
+
+public class StringStudy {
+	
+	public static void main(String[] args)
+	{
+		String name = "Cipherschools";
+		String name2 = "Cipherschools";
+		
+		String name3 = new String("Cipherschools");
+		String name4 = new String("Cipherschools");
+
+		System.out.println(name==name2);
+		System.out.println(name3==name4);
+		System.out.println(name==name3);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1. CONCATENATION");
+		
+		String s1 = "Hello";
+		s1 = s2 + "Peeps";
+		System.out.println(s1);
+		System.out.println(s1 + " How are u doing?");
+		System.out.println(s1);
+		
+		String s2 = new String("Hello");
+		String s3 = new String("People");
+		String s4 = s2.concat(s3);
+		System.out.println(s4);
+		System.out.println(s2);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1: Checking IF STRINGS ARE EQUAL IN VALUE");
+
+		System.out.println(name.equals(name2));
+		System.out.println(name.equals(name3));
+
+		System.out.println("=====================================");
+		System.out.prinltn("3: Creating new String object from character array");
+
+		char arr[] = {'c','I','P','H','E','R'};
+		String strFromArr = new String(arr);
+		System.out.println(strFromArr);
+	}
+
+}
+
+
+
+//////////////////////////////////////////////String 3////////////////////////////////////////////
+
+
+
+
+package CoreJava;
+
+public class StringStudy {
+	
+	public static void main(String[] args)
+	{
+		String name = "Cipherschools";
+		String name2 = "Cipherschools";
+		
+		String name3 = new String("Cipherschools");
+		String name4 = new String("Cipherschools");
+
+		System.out.println(name==name2);
+		System.out.println(name3==name4);
+		System.out.println(name==name3);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1. CONCATENATION");
+		
+		String s1 = "Hello";
+		s1 = s2 + "Peeps";
+		System.out.println(s1);
+		System.out.println(s1 + " How are u doing?");
+		System.out.println(s1);
+		
+		String s2 = new String("Hello");
+		String s3 = new String("People");
+		String s4 = s2.concat(s3);
+		System.out.println(s4);
+		System.out.println(s2);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1: Checking IF STRINGS ARE EQUAL IN VALUE");
+
+		System.out.println(name.equals(name2));
+		System.out.println(name.equals(name3));
+
+		System.out.println("=====================================");
+		System.out.prinltn("3: Creating new String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr);
+		System.out.println(strFromArr);
+
+		System.out.println("=====================================");
+		System.out.prinltn("4: Creating partial String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr, 1,3);
+		System.out.println(strFromArr);
+
+		String partialstrFromArr2 = new String(arr, 2,3);
+		System.out.println(partialstrFromArr2);
+
+		System.out.println.out.println("==============================");
+		System.out.println("5. Changing the case");
+		System.out.println(name.toLowerCase());
+		System.out.println(name.toUpperCase());
+		name = name.toUpperCase();
+		System.out.println(name);
+
+
+		System.out.println.out.println("==============================");
+		System.out.println("6.Splitting");
+		System.out.println("Please Enter your Full Name: ");
+		Scanner sc = new Scanner = sc.nextLine();
+		String fullName = sc.nextLine();
+		String strArr[] = fullName.split(" ");
+		for(int i = 0;i<strrArr.length;i++)
+		{
+			System.out.println(strrArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by comas: ");
+		Scanner csvText = sc.nextLine();
+		String csvArr[] = civText.split(" ");
+		for(int i = 0;i<csvArr.length;i++)
+		{
+			System.out.println(csvArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by dots: ");
+		Scanner dotText = sc.nextLine();
+		String dotArr[] = civText.split("[.]");
+		for(int i = 0;i<dotArr.length;i++)
+		{
+			System.out.println(dotArr[i]);
+		}
+
+		String backslashText = ("Hello i attended \"java\" class");
+		String backslashArr[] = civText.split("[.]");
+		for(int i = 0;i<backslashArr.length;i++)
+		{
+			System.out.println(backslashArr[i]);
+		}
+	}
+
+}
+
+
+
+//////////////////////////////////////////////String 4 //////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class StringStudy {
+	
+	public static void main(String[] args)
+	{
+		String name = "Cipherschools";
+		String name2 = "Cipherschools";
+		
+		String name3 = new String("Cipherschools");
+		String name4 = new String("Cipherschools");
+
+		System.out.println(name==name2);
+		System.out.println(name3==name4);
+		System.out.println(name==name3);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1. CONCATENATION");
+		
+		String s1 = "Hello";
+		s1 = s2 + "Peeps";
+		System.out.println(s1);
+		System.out.println(s1 + " How are u doing?");
+		System.out.println(s1);
+		
+		String s2 = new String("Hello");
+		String s3 = new String("People");
+		String s4 = s2.concat(s3);
+		System.out.println(s4);
+		System.out.println(s2);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1: Checking IF STRINGS ARE EQUAL IN VALUE");
+
+		System.out.println(name.equals(name2));
+		System.out.println(name.equals(name3));
+
+		System.out.println("=====================================");
+		System.out.prinltn("3: Creating new String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr);
+		System.out.println(strFromArr);
+
+		System.out.println("=====================================");
+		System.out.prinltn("4: Creating partial String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr, 1,3);
+		System.out.println(strFromArr);
+
+		String partialstrFromArr2 = new String(arr, 2,3);
+		System.out.println(partialstrFromArr2);
+
+		System.out.println.out.println("==============================");
+		System.out.println("5. Changing the case");
+		System.out.println(name.toLowerCase());
+		System.out.println(name.toUpperCase());
+		name = name.toUpperCase();
+		System.out.println(name);
+
+
+		System.out.println.out.println("==============================");
+		System.out.println("6.Splitting");
+		System.out.println("Please Enter your Full Name: ");
+		Scanner sc = new Scanner = sc.nextLine();
+		String fullName = sc.nextLine();
+		String strArr[] = fullName.split(" ");
+		for(int i = 0;i<strrArr.length;i++)
+		{
+			System.out.println(strrArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by comas: ");
+		Scanner csvText = sc.nextLine();
+		String csvArr[] = civText.split(" ");
+		for(int i = 0;i<csvArr.length;i++)
+		{
+			System.out.println(csvArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by dots: ");
+		Scanner dotText = sc.nextLine();
+		String dotArr[] = civText.split("[.]");
+		for(int i = 0;i<dotArr.length;i++)
+		{
+			System.out.println(dotArr[i]);
+		}
+
+		String backslashText = ("Hello i attended \"java\" class");
+		String backslashArr[] = civText.split("[.]");
+		for(int i = 0;i<backslashArr.length;i++)
+		{
+			System.out.println(backslashArr[i]);
+		}
+
+		System.out.println.out.println("==============================");
+		System.out.println("7. Length of String");
+		int len = name.length();
+		System.out.println("Length of : " + name + " is " + len);
+
+		System.out.println.out.println("==============================");
+		System.out.println("7. Finding Index of a char in a string");
+		int index = name.indexof('e');
+		System.out.println("index of e in : " + name + " is : " + index);
+
+		int index2 = name.indexof('E');
+		System.out.println("index of e in : " + name + " is : " + index2);
+
+		int index3 = name.indexof("School");
+		System.out.println("index of school in : " + name + " is : " + index3);
+
+		int index4 = name.indexof('o',10);
+		System.out.println("index of e in : " + name + " is : " + index4);
+
+		int indexOf() = 0;
+		while()
+		{
+			indexOf() = name.indexOf('o', indexOf() + 1);
+			if(indexOf0 == -1) break;
+			System.out.println("O found at : " + indexOf0);
+		}
+		
+	}
+
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////String 5//////////////////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class StringStudy {
+	
+	public static void main(String[] args)
+	{
+		String name = "Cipherschools";
+		String name2 = "Cipherschools";
+		
+		String name3 = new String("Cipherschools");
+		String name4 = new String("Cipherschools");
+
+		System.out.println(name==name2);
+		System.out.println(name3==name4);
+		System.out.println(name==name3);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1. CONCATENATION");
+		
+		String s1 = "Hello";
+		s1 = s2 + "Peeps";
+		System.out.println(s1);
+		System.out.println(s1 + " How are u doing?");
+		System.out.println(s1);
+		
+		String s2 = new String("Hello");
+		String s3 = new String("People");
+		String s4 = s2.concat(s3);
+		System.out.println(s4);
+		System.out.println(s2);
+		
+		System.out.println("=====================================");
+		System.out.prinltn("1: Checking IF STRINGS ARE EQUAL IN VALUE");
+
+		System.out.println(name.equals(name2));
+		System.out.println(name.equals(name3));
+
+		System.out.println("=====================================");
+		System.out.prinltn("3: Creating new String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr);
+		System.out.println(strFromArr);
+
+		System.out.println("=====================================");
+		System.out.prinltn("4: Creating partial String object from character array");
+
+		char arr[] = {'C','I','P','H','E','R'};
+		String strFromArr = new String(arr, 1,3);
+		System.out.println(strFromArr);
+
+		String partialstrFromArr2 = new String(arr, 2,3);
+		System.out.println(partialstrFromArr2);
+
+		System.out.println.out.println("==============================");
+		System.out.println("5. Changing the case");
+		System.out.println(name.toLowerCase());
+		System.out.println(name.toUpperCase());
+		name = name.toUpperCase();
+		System.out.println(name);
+
+
+		System.out.println.out.println("==============================");
+		System.out.println("6.Splitting");
+		System.out.println("Please Enter your Full Name: ");
+		Scanner sc = new Scanner = sc.nextLine();
+		String fullName = sc.nextLine();
+		String strArr[] = fullName.split(" ");
+		for(int i = 0;i<strrArr.length;i++)
+		{
+			System.out.println(strrArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by comas: ");
+		Scanner csvText = sc.nextLine();
+		String csvArr[] = civText.split(" ");
+		for(int i = 0;i<csvArr.length;i++)
+		{
+			System.out.println(csvArr[i]);
+		}
+
+		System.out.println("Please Enter Something seprerated by dots: ");
+		Scanner dotText = sc.nextLine();
+		String dotArr[] = civText.split("[.]");
+		for(int i = 0;i<dotArr.length;i++)
+		{
+			System.out.println(dotArr[i]);
+		}
+
+		String backslashText = ("Hello i attended \"java\" class");
+		String backslashArr[] = civText.split("[.]");
+		for(int i = 0;i<backslashArr.length;i++)
+		{
+			System.out.println(backslashArr[i]);
+		}
+
+		System.out.println.out.println("==============================");
+		System.out.println("7. Length of String");
+		int len = name.length();
+		System.out.println("Length of : " + name + " is " + len);
+
+		System.out.println.out.println("==============================");
+		System.out.println("7. Finding Index of a char in a string");
+		int index = name.indexof('e');
+		System.out.println("index of e in : " + name + " is : " + index);
+
+		int index2 = name.indexof('E');
+		System.out.println("index of e in : " + name + " is : " + index2);
+
+		int index3 = name.indexof("School");
+		System.out.println("index of school in : " + name + " is : " + index3);
+
+		int index4 = name.indexof('o',10);
+		System.out.println("index of e in : " + name + " is : " + index4);
+
+		int indexOf() = 0;
+		while()
+		{
+			indexOf() = name.indexOf('o', indexOf() + 1);
+			if(indexOf0 == -1) break;
+			System.out.println("O found at : " + indexOf0);
+		}
+
+		System.out.println.out.println("==============================");
+		System.out.println("9. Extract a Substring");
+		String wf = "Wakanda Forever";
+		String subString2 = wf.substrng(3);
+		System.out.println(subString);
+
+		String subString2 = wf.substring(3,7);
+		System.out.println(subString2);
+
+		System.out.println.out.println("==============================");
+		System.out.println("10. Finding a character at a given index");
+
+		System.out.println(name.charAt(4));
+		char charAtIndex = name.charAt(6);
+		System.out.println(charAtIndex);
+
+		System.out.println.out.println("==============================");
+		System.out.println("11. char Array from a string");
+		char arr2[] = name.tocharArray();
+		for(int i = 0;i<arr2.length;i++)
+		{
+			System.out.println(arr2[i]);
+		}
+
+		System.out.println.out.println("==============================");
+		System.out.println("12.Check if a string is empty");
+		String emptyString = new String();
+		String emptyString2 = " ";
+		System.out.println(emptyString);
+		System.out.println(emptyString2);
+		System.out.println(emptyString.equals((" "));
+		System.out.println(emptyString2.equals((" "));
+		System.out.println(emptyString.isEmpty();
+		System.out.println(emptyString2.isEmpty();
+		System.out.println(emptyString.isEmpty();
+		System.out.println(emptyString.isBlank("));
+
+		System.out.println.out.println("==============================");
+		System.out.println("13. Comparing strings lexicographically -> alphabatically");
+		String textOne = "QHey!";
+		String textTwo = "QBey";
+		System.out.println(textOne.compareTo(textTwo));
+		System.out.println(textTwo.compareTo(textTwo));
+		System.out.println(textOne.compareTo(textTwo));
+
+		System.out.println.out.println("==============================");
+		System.out.println("14, Trimming and Spaces fromm front and end");
+		String s5 = new String("Hello                     ");
+		String s6 = new String("                  Hello            ");
+		String s7 = new String("                                Hello         People           ");
+		System.out.println("*" + s5.trim() + "*");
+		System.out.println("*" + s6.trim() + "*");
+		System.out.println("*" + s7.trim() + "*");
+
+		System.out.println.out.println("==============================");
+		System.out.println("15. Replacing a character");
+		System.out.println(name.replace('o', '0'));
+		System.out.println(name.replace('ooo', '000'));
+	}
+
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////Recursion/////////////////////////////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class RecursionStudy {
+
+	static void printDescending(int n)
+	{
+		if(n<1) return;
+		System.out.println(n);
+		printDescending(n-1);
+	}
+	public void main(String[] args) {
+		int n = 5;
+		printDescending(n);
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////Fibonacci Series//////////////////////////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class Fibonacci {
+
+	static int fib(int n)
+	{
+		if(n<2) return n;
+		int a = fib(n-1);
+		int b = fib(n-2);
+		return a + b;
+	}
+	public static void main(String[] args) {
+		int n =4;
+		System.out.println(fib(n));
+	}
+}
+
+
+
+//////////////////////////////////////////////////////////////Binary search without recursion///////////////////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class BinarySearchWithoutRecursion {
+	
+	public static void main(String[] args) {
+		int arr[] = {2,5,8,12,16,23,38,56,72};
+		int x = 23;
+		
+		int l =0;
+		int r =arr.length-1;
+		
+		while(l<=r)
+		{
+			int min = (l-r)/2;
+			if(arr[mid] == x)
+			{
+				System.out.println("Value found at index: " + mid);
+			}
+			else if(x<arr[mid])
+			{
+				r = mid-1
+			}else
+			{
+				r = mid-1;
+			}
+		}
+		System.out.println("Value not found");
+	}
+
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////Sliding window//////////////////////////////////////////////////////////////////////////
+
+
+import java.util.ArrayList;
+
+class Solution{
+	static int maximunSumSubarray(int k, ArrayList<Integer> Arr,int N) {
+		int max = Integer.MIN_VALUE;
+		for(int i =0;i<=N-K;i++)
+		{
+			int sum = 0;
+			for(int j=0;j<k;j++)
+			{
+				sum = sum + Arr.get(i+j);
+			}
+			if(sum>max) max = sum;
+		}
+		return max;
+		
+		int max = Integer.MIN_VALUE;
+		int su = 0;
+		for(int i =0;i<=N-K;i++)
+		{
+			int sum = 0;
+			for(int i=0;i<N;i++)
+			{
+				sum = sum + Arr.get(i);
+			}
+			int max = sum;
+			for(int i =0 ; i<n-k;i++)
+			{
+				sum = sum - Arr.get(i);
+				if(sum>max) max = sum;
+			}
+			return max;
+		}
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////Two Pointer Approach//////////////////////////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+public class TwoPointerConcept {
+	public static void main(String[] args) {
+		int arr[] = {10,20,35,50,75,80};
+		int x = 95;
+		int l =0;
+		int r = arr.length -1;
+		while(l<r)
+		{
+			int sum = arr[l] + arr[r];
+			if(sum==x)
+			{
+				System.out.println("Found " + x + " as sun of values on index: " + l + " and indes " + r);
+				return;
+			}
+			else if(sum<x)
+			{
+				l++;
+			}
+			else
+			{
+				r--;
+			}
+		}
+		System.out.println("Sum not found.");
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////Reverse the String///////////////////////////////////////////////////////////////////////////
+
+
+package CoreJava;
+
+public class ReverseAString {
+	
+	public static void main(String[]args)
+	{
+		String s1 = "CipherSchools";
+		int n = s1.length();
+		char arr[] = neww char[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i] = s1.charAt(n-1-i);
+		}
+		String rev = new String(arr);
+		System.out.println(rev);
+		
+		String res = new String();
+		for(int i=n-1;i>=0;i--)
+		{
+			res = res + s1.charAt(i);
+		}
+		System.out.println(res);
+		
+		char strArr[] = s1.toCharArray();
+		int l = 0;
+		int r = n-1;
+		while(l<r)
+		{
+			char temp = strArr[l];
+			strArr[l] = strrArr[r];
+			strArr = temp;
+			l++;
+			r--;
+		}
+		String result = new String(strArr);
+		System.out.println(result);
+	}
+
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////String Check Palindrome////////////////////////////////////////////////////////////////////
+
+
+
+
+package CoreJava;
+
+public class checkPalidrome {
+
+	static boolean checkPalidrome(String s)
+	{
+		int l = 0;
+		int r = s.length() - 1;
+		while(l<r)
+		{
+			if(s.charAt(l) != s.charAt(r)) {
+				return false;
+			}
+			l++;
+			r--;
+		}
+		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		String s = "MADAM";
+		String s1 = "CIPHER";
+		String s2 = "Madam";
+		System.out.println(checkPalidrome(s));
+		System.out.println(checkPalidrome(s1));
+		System.out.println(checkPalidrome(s2));
+	}
+}
+
+
+
+
+
+
+package CoreJava;
+
+public class Anagram {
+
+	static boolean isAnagram(String s1, String s2)
+	{
+		if(s1.length() != s2.length()) return false;
+		
+		s1 = s1.toLowerCase();
+		s2 = s2.toLowerCase();
+		
+		int n = s1.length();
+		int freqArr1[] = new int[256];
+		int freqArr2[] = new int[256];
+		
+		for(int i =0;i<n;i++)
+		{
+			int index1 = s1.charAt(i) - 'a';
+			freqArr1[index1]++;
+			
+			int index2 = s2.charAt(i)-'a';
+			freqArr2[index2]++;
+		}
+		
+		for(int i=0;i<26;i++)
+		{
+			if(freqArr1[i]!=freqArr2[i])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(isAnagram("MAT","tac"));
+	}
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////Linked List/////////////////////////////////////////////////////
+
+
+
+package CoreJava;
+
+class Node{
+	int data;
+	Node next;
+	Node(int data)
+	{
+		this.data = data;
+		this.next = null;
+	}
+}
+
+public class MyLL {
+	
+	static void print(Node head) {
+		while(head != null)
+		{
+			System.out.print(head.data + " ");
+			head = head.next;
+		}
+		System.out.println();
+	}
+	public static void main(String[] args) {
+		Node head = new Node(5);
+		Node second = new Node(6);
+		head.next = second;
+		Node third = new Node(7);
+		second.next = third;
+		Node fourth = new Node(8);
+		third.next = fourth;
+		Node fifth = new Node(9);
+		fourth.next = fifth;
+//		System.out.println(head.data);
+//		System.out.println(head.next.data);
+//		System.out.println(head.next.next.data);
+//		System.out.println(head.next.next.next.data);
+//		System.out.println(head.next.next.next.next.data);
+		
+		while(head != null)
+		{
+			System.out.println(head.data);
+			head = head.next;
+		}
+		System.out.println(head);
+		
+		print(head);
+		print(head);
+	}
+}
+
+
+
+//////////////////////////////////////////////////////Linked List Insertion/////////////////////////////////////////////////
+
+
+package CoreJava;
+
+class Node{
+	int data;
+	Node next;
+	Node(int data)
+	{
+		this.data = data;
+		this.next = null;
+	}
+}
+
+public class MyLL {
+	
+	static void print(Node head) {
+		while(head != null)
+		{
+			System.out.print(head.data + " ");
+			head = head.next;
+		}
+		System.out.println();
+	}
+	
+	static Node insertAtHead(Node head, int data)
+	{
+		Node temp = new Node(data);
+		temp.next = head;
+		head = temp;
+		return head;
+	}
+	
+	static Node insertAtEnd(Node head, int data)
+	{
+		if(head == null) return new Node(data);
+		Node temp = new Node(data);
+//		temp.next = head;
+		Node last = head;
+		while(last.next != null) 
+		{
+			last = last.next;
+		}
+		last.next = temp;
+		return head;
+	}
+	
+	public static void main(String[] args) {
+		Node head = new Node(5);
+		Node second = new Node(6);
+		head.next = second;
+		Node third = new Node(7);
+		second.next = third;
+		Node fourth = new Node(8);
+		third.next = fourth;
+		Node fifth = new Node(9);
+		fourth.next = fifth;
+//		System.out.println(head.data);
+//		System.out.println(head.next.data);
+//		System.out.println(head.next.next.data);
+//		System.out.println(head.next.next.next.data);
+//		System.out.println(head.next.next.next.next.data);
+		
+		while(head != null)
+		{
+			System.out.println(head.data);
+			head = head.next;
+		}
+		System.out.println(head);
+		
+		print(head);
+		print(head);
+		
+		insertAtHead(head, 4);
+		print(head);
+		
+		head = insertAtEnd(head, 10);
+	}
+}
+
+
+
+/////////////////////////////////////////////////////////Linked List Deletion//////////////////////////////////////////////
+
+
+package CoreJava;
+
+class Node{
+	int data;
+	Node next;
+	Node(int data)
+	{
+		this.data = data;
+		this.next = null;
+	}
+}
+
+public class MyLL {
+	
+	static void print(Node head) {
+		if(head != null) {
+			System.out.println("Empty LL! Noting to print");
+		}
+		while(head != null)
+		{
+			System.out.print(head.data + " ");
+			head = head.next;
+		}
+		System.out.println();
+	}
+	
+	static Node insertAtHead(Node head, int data)
+	{
+		Node temp = new Node(data);
+		temp.next = head;
+		head = temp;
+		return head;
+	}
+	
+	static Node insertAtEnd(Node head, int data)
+	{
+		if(head == null) return new Node(data);
+		Node temp = new Node(data);
+//		temp.next = head;
+		Node last = head;
+		while(last.next != null) 
+		{
+			last = last.next;
+		}
+		last.next = temp;
+		return head;
+	}
+	
+	static void deleteLL(Node head)
+	{
+		return null;
+	}
+	
+	static Node deleteFromHead(Node head)
+	{
+		if(head == null) {
+			System.out.println("Empty LL!! Nothing to delete");
+			return null;
+		}
+		return head.next;
+	}
+	public static void main(String[] args) {
+		Node head = new Node(5);
+		Node second = new Node(6);
+		head.next = second;
+		Node third = new Node(7);
+		second.next = third;
+		Node fourth = new Node(8);
+		third.next = fourth;
+		Node fifth = new Node(9);
+		fourth.next = fifth;
+//		System.out.println(head.data);
+//		System.out.println(head.next.data);
+//		System.out.println(head.next.next.data);
+//		System.out.println(head.next.next.next.data);
+//		System.out.println(head.next.next.next.next.data);
+		
+		while(head != null)
+		{
+			System.out.println(head.data);
+			head = head.next;
+		}
+		System.out.println(head);
+		
+		print(head);
+		print(head);
+		
+		insertAtHead(head, 4);
+		print(head);
+		
+		head = insertAtEnd(head, 10);
+		print(head);
+		
+		head2 = insertAtEnd(null, 1);
+		print(head2);
+		
+		head2 = deleteLL(head2);
+		print(head2);
+		
+		head2 = insertAtEnd(null, 1);
+		print(head2);
+		
+		head2 = deleteFromHead(head2);
+	}
+}
+
+
+
+///////////////////////////////////////////////////Linked Lists Middle Element///////////////////////////////////////
+
+
+package CoreJava;
+
+class Node{
+	int data;
+	Node next;
+	Node(int data)
+	{
+		this.data = data;
+		this.next = null;
+	}
+}
+
+public class MyLL {
+	
+	static void print(Node head) {
+		if(head != null) {
+			System.out.println("Empty LL! Noting to print");
+		}
+		while(head != null)
+		{
+			System.out.print(head.data + " ");
+			head = head.next;
+		}
+		System.out.println();
+	}
+	
+	static Node insertAtHead(Node head, int data)
+	{
+		Node temp = new Node(data);
+		temp.next = head;
+		head = temp;
+		return head;
+	}
+	
+	static Node insertAtEnd(Node head, int data)
+	{
+		if(head == null) return new Node(data);
+		Node temp = new Node(data);
+//		temp.next = head;
+		Node last = head;
+		while(last.next != null) 
+		{
+			last = last.next;
+		}
+		last.next = temp;
+		return head;
+	}
+	
+	static void deleteLL(Node head)
+	{
+		return null;
+	}
+	
+	static Node deleteFromHead(Node head)
+	{
+		if(head == null) {
+			System.out.println("Empty LL!! Nothing to delete");
+			return null;
+		}
+		return head.next;
+	}
+	
+	static void findMiddleElements(Node head)
+	{
+		int len = 0;
+		Node temp = head;
+		while(temp!=null)
+		{
+			temp = temp.next;
+			len++;
+		}
+		
+		temp = head;
+		for(int i=0;i<len/2;i++)
+		{
+			temp = temp.next;
+		}
+		System.out.println(temp.data);
+	}
+
+	static void findMiddleElement(Node head)
+	{
+		Node slow = head;
+		Node fast = head;
+		while(fast.next!=null && fast.next!=null)
+		{
+			fast = fast.next.next;
+			slow = slow.next;
+		}
+		
+		System.out.println(slow.data);
+	}
+	
+	public static void main(String[] args) {
+		Node head = new Node(5);
+		Node second = new Node(6);
+		head.next = second;
+		Node third = new Node(7);
+		second.next = third;
+		Node fourth = new Node(8);
+		third.next = fourth;
+		Node fifth = new Node(9);
+		fourth.next = fifth;
+//		System.out.println(head.data);
+//		System.out.println(head.next.data);
+//		System.out.println(head.next.next.data);
+//		System.out.println(head.next.next.next.data);
+//		System.out.println(head.next.next.next.next.data);
+		
+		while(head != null)
+		{
+			System.out.println(head.data);
+			head = head.next;
+		}
+		System.out.println(head);
+		
+		print(head);
+		print(head);
+		
+		insertAtHead(head, 4);
+		print(head);
+		
+		head = insertAtEnd(head, 10);
+		print(head);
+		
+		head2 = insertAtEnd(null, 1);
+		print(head2);
+		
+		head2 = deleteLL(head2);
+		print(head2);
+		
+		head2 = insertAtEnd(null, 1);
+		print(head2);
+		
+		head2 = deleteFromHead(head2);
+		
+		findMiddleElements(head);
+		
+		head = insertAtEnd(head, 11);
+		print(head);
+		
+		findMiddleElements(head);
+		findMiddleElementsOld(head);
+	}
+}
+
+
+
+
+/////////////////////////////////////////////Removing the Loop in Linked List////////////////////////////////////
+
+
+void removeLoop(Node listNode, Node loopNode)
+{
+	Node temp = loopNode;
+	int size = 1;
+	while(loopNode.next!=temp)
+	{
+		loopNode = loopNode.next;
+		size++;
+	}
+	
+	Node slow = head;
+	Node fast = head;
+	for(int i=0;i<size;i++)
+	{
+		fast = fast.next;
+	}
+	while(slow.next != fast.next) {
+		slow = slow.next;
+		fast = fast.next;
+	}
+	fast.next = null;
+}
+
+
